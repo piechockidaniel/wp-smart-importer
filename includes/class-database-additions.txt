@@ -1,0 +1,9 @@
+New columns to add to wpsi_jobs table (ADD COLUMN statements for existing installs):
+
+ALTER TABLE {prefix}wpsi_jobs
+  ADD COLUMN image_config  LONGTEXT DEFAULT NULL AFTER meta_fields,
+  ADD COLUMN woo_config    LONGTEXT DEFAULT NULL AFTER image_config,
+  ADD COLUMN tax_configs   LONGTEXT DEFAULT NULL AFTER woo_config,
+  ADD COLUMN function_code LONGTEXT DEFAULT NULL AFTER tax_configs;
+
+These are also in the CREATE TABLE statement in class-database.php below.

@@ -1,0 +1,89 @@
+/* ── WooCommerce attributes ───────────────────────────────── */
+.wpsi-attr-header, .wpsi-attr-row {
+    display:grid;
+    grid-template-columns: 160px 1fr 220px 32px;
+    gap:6px; align-items:center; padding:5px 8px;
+}
+.wpsi-attr-header {
+    background:#f6f7f7; border:1px solid #ddd; border-radius:6px 6px 0 0;
+    font-weight:600; font-size:12px; color:#50575e;
+}
+.wpsi-attr-row {
+    border:1px solid #e2e8f0; border-top:none; background:#fff;
+}
+.wpsi-attr-row:last-child { border-radius:0 0 4px 4px; }
+.wpsi-attr-row input[type="text"] { width:100%; font-size:12px; padding:4px 6px; border:1px solid #c3c4c7; border-radius:3px; box-sizing:border-box; }
+.wpsi-attr-flags { display:flex; flex-wrap:wrap; gap:4px 10px; }
+.wpsi-attr-flags label { font-size:11px; display:flex; gap:4px; align-items:center; white-space:nowrap; }
+
+/* ── Function Editor ──────────────────────────────────────── */
+.wpsi-fn-toolbar { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:10px; }
+.wpsi-fn-editor-wrap {
+    border:1px solid #c3c4c7; border-radius:4px; overflow:hidden;
+    background:#1e1e1e; font-family:'SFMono-Regular',Consolas,monospace;
+}
+.wpsi-fn-editor-header { display:flex; }
+.wpsi-fn-line-numbers {
+    background:#2d2d2d; color:#858585; font-size:12px; line-height:1.6;
+    padding:8px 8px 8px 12px; min-width:36px; text-align:right;
+    user-select:none; white-space:pre; border-right:1px solid #3d3d3d;
+}
+.wpsi-fn-textarea {
+    flex:1; background:#1e1e1e; color:#d4d4d4; border:none; outline:none;
+    font-family:'SFMono-Regular',Consolas,monospace; font-size:12px;
+    line-height:1.6; padding:8px 12px; resize:vertical; min-height:280px;
+    white-space:pre; overflow:auto;
+}
+.wpsi-fn-ref {
+    margin-top:10px; font-size:11px; color:#64748b;
+    background:#f8faff; border:1px solid #e2e8f0;
+    padding:8px 12px; border-radius:4px; line-height:1.8;
+}
+.wpsi-fn-ref code { background:#e2e8f0; padding:1px 4px; border-radius:3px; font-size:11px; }
+
+/* ── Dry Run ──────────────────────────────────────────────── */
+.wpsi-modal--wide { min-width:700px; max-width:900px; max-height:85vh; overflow-y:auto; }
+.wpsi-dryrun-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; }
+.wpsi-dryrun-header h2 { margin:0; }
+.wpsi-dryrun-controls { display:flex; gap:8px; align-items:center; }
+.wpsi-dryrun-hint { color:#64748b; font-size:13px; }
+
+.wpsi-dryrun-stats { display:flex; gap:10px; margin:12px 0; flex-wrap:wrap; }
+.wpsi-dryrun-stat { text-align:center; padding:8px 14px; border-radius:6px; border:1px solid #e2e8f0; min-width:80px; }
+.wpsi-dryrun-stat .n { font-size:22px; font-weight:700; }
+.wpsi-dryrun-stat .l { font-size:11px; color:#64748b; }
+.wpsi-dryrun-stat.create  .n { color:#00a32a; }
+.wpsi-dryrun-stat.update  .n { color:#2271b1; }
+.wpsi-dryrun-stat.skip    .n { color:#b45309; }
+.wpsi-dryrun-stat.locked  .n { color:#7c3aed; }
+.wpsi-dryrun-stat.unchanged .n { color:#64748b; }
+.wpsi-dryrun-stat.error   .n { color:#d63638; }
+
+.wpsi-dryrun-records { display:flex; flex-direction:column; gap:10px; margin-top:16px; }
+.wpsi-dryrun-record {
+    border:1px solid #e2e8f0; border-radius:6px; overflow:hidden; font-size:12px;
+}
+.wpsi-dryrun-record__head {
+    display:flex; align-items:center; gap:10px; padding:8px 12px;
+    background:#f8faff; border-bottom:1px solid #e2e8f0; font-weight:600;
+}
+.wpsi-dryrun-record__body { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+.wpsi-dryrun-section { padding:10px 12px; border-right:1px solid #f0f0f0; }
+.wpsi-dryrun-section:last-child { border-right:none; }
+.wpsi-dryrun-section h5 { margin:0 0 6px; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:#50575e; }
+.wpsi-dryrun-kv { display:flex; gap:6px; margin-bottom:3px; }
+.wpsi-dryrun-kv .k { color:#64748b; min-width:120px; flex-shrink:0; }
+.wpsi-dryrun-kv .v { color:#1d2327; word-break:break-word; }
+
+.wpsi-action-badge {
+    display:inline-block; padding:2px 8px; border-radius:10px; font-size:11px; font-weight:700;
+}
+.wpsi-action-badge--create    { background:#dcfce7; color:#166534; }
+.wpsi-action-badge--update    { background:#dbeafe; color:#1e40af; }
+.wpsi-action-badge--skip      { background:#fef3c7; color:#92400e; }
+.wpsi-action-badge--locked    { background:#ede9fe; color:#5b21b6; }
+.wpsi-action-badge--unchanged { background:#f1f5f9; color:#475569; }
+.wpsi-action-badge--error     { background:#ffeaea; color:#d63638; }
+
+/* ── Image source options ─────────────────────────────────── */
+.wpsi-img-mode-opts { display:flex; flex-direction:column; gap:6px; }
